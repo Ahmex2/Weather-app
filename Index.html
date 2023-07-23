@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="search-box">
+            <i class="gg-search"></i>
+            <input type="text" id="search-input" placeholder="Enter location">
+            <button id="search-btn">Search</button>
+        </div>
+        <div class="loader hidden"></div>
+        <div class="weather-box hidden">
+            <img id="weather-icon" src="" alt="Weather Icon">
+            <div class="temperature" id="temperature"></div>
+            <div class="description" id="description"></div>
+            <div class="details">
+                <div class="humidity">
+                    <i class="gg-humidity humidity-icon"></i>
+                    <span id="humidity"></span>
+                </div>
+                <div class="wind-speed">
+                    <i class="gg-wind wind-speed-icon"></i>
+                    <span id="wind-speed"></span>
+                </div>
+            </div>
+        </div>
+        <div class="forecast hidden" id="forecast">
+            <h2>5-Day Forecast</h2>
+            <ul id="forecast-list"></ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+/* Reset Styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F6F6F6;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#search-input {
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem 0 0 2rem;
+    font-size: 1.6rem;
+    width: 30rem;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+#search-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0 2rem 2rem 0;
+    font-size: 1.6rem;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#search-btn:hover {
+    background-color: #555;
+}
+
+.loader {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    border: 1rem solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s ease-in-out infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+.weather-box {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease;
+}
+
+#weather-icon {
+    width: 10rem;
+    margin-bottom: 2rem;
+}
+
+.temperature {
+    font-size: 6rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.description {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.humidity,
+.wind-speed {
+    font-size: 1.6rem;
+    margin-right: 4rem;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.humidity-icon,
+.wind-speed-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    fill: #333;
+}
+
+.forecast {
+    text-align: center;
+    animation: fadeIn 1s ease;
+    margin-top: 4rem;
+}
+
+#forecast h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+#forecast-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.forecast-item {
+    margin: 2rem;
+    padding: 2rem;
+    border: none;
+    border-radius: 2rem;
+    flex-basis: calc(33.33% - 4rem);
+    animation: fadeIn 1s ease;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.forecast-item:hover {
+    background-color: #F6F6F6;
+}
+
+.forecast-date {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.forecast-icon {
+    width: 5rem;
+    margin-bottom: 1rem;
+}
+
+.forecast-temp {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Keyframe Animations */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Custom Styles */
+.temperature {
+    color: #2c3e50;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.description {
+    color: #34495e;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.humidity,
+.wind-speed {
+    color: #7f8c8d;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.humidity-icon {
+    background-image: url('https://img.icons8.com/?size=512&id=1690&format=png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wind-speed-icon {
+    background-image: url('https://img.icons8.com/material-rounded/96/000000/wind.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+}
+
+#search-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+}
+
+/* CSS.gg Icons */
+.icon-search {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 1rem;
+    fill: #fff;
+}
+
+.icon-cloudy {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    fill: #333;
+}
+
+.icon-humidity {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    fill: #333;
+}
+
+.icon-wind {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+    fill: #333;
+}
